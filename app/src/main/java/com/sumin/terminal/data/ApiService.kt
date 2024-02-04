@@ -5,10 +5,9 @@ import retrofit2.http.Path
 
 interface ApiService {
 
-    @GET(
-        "aggs/ticker/AAPL/range/{timeframe}/2022-01-09/2023-01-09?adjusted=true&sort=desc&limit" +
-                "=50000&apiKey=Is6w5efIZ0AYP5cf1wBPQCo4Fo4LXobp"
-    )
+    //def 2023-11-01/2024-01-13
+    //test 2023-11-01/2024-11-10
+    @GET("aggs/ticker/X:SOLUSD/range/{timeframe}/2023-12-01/2023-12-02?adjusted=true&sort=desc&limit=50000&apiKey=1X31VsWmKXosLQ8h9SLYzw7tEcOxJEPt")
     suspend fun loadBars(
         @Path("timeframe") timeFrame: String
     ): Result
